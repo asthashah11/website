@@ -8,27 +8,31 @@
 </head>
 <body>
 
-    <!-- Main header -->
-    <div class="container">
-      <div class="top-row">
-    <div class="avatar-name">
+  <!-- Header / Name + Icons -->
+  <div class="container">
+    <div class="top-row">
       <h1 class="name-centered">Astha Shah</h1>
-    </div>
-    <div class="social-icons">
+
+      <div class="social-icons">
         <a href="https://www.linkedin.com/in/asthashah8338/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
         <a href="https://github.com/asthashah11" target="_blank"><i class="fab fa-github"></i></a>
         <a href="https://scholar.google.com/citations?hl=en&user=n4q77cYAAAAJ" target="_blank"><i class="fas fa-graduation-cap"></i></a>
         <a href="mailto:astha.shah@tufts.edu"><i class="fas fa-envelope"></i></a>
       </div>
     </div>
+  </div>
 
-    <hr class="divider">
+  <!-- Divider (outside container so it can be wider) -->
+  <hr class="divider">
+
+  <!-- Avatar under divider, aligned right -->
+  <div class="container">
     <div class="below-divider">
-    <div class="text-spacer"></div>
+      <div></div>
       <img src="avatar.png" alt="Avatar of Astha" class="avatar-large">
     </div>
 
-
+    <!-- About -->
     <p class="about">
       I study computer science at Tufts, and try to understand how humans and artificial systems learn at the 
       <a href="https://www.michaelchughes.com/" target="_blank">Hughes Lab</a>. Additionally, I support the 
@@ -56,6 +60,7 @@
           <em>arXiv preprint, 2024</em>
         </p>
       </div>
+
       <div class="paper">
         <p>
           <strong><a href="https://ieeexplore.ieee.org/document/10937634" target="_blank">
@@ -67,20 +72,17 @@
     </div>
   </div>
 
-  <!-- 3-Column Project Cards -->
+  <!-- Project Cards -->
   <div class="card-grid content-section" data-tag="projects" style="display: none;">
     <a href="ethical-ai.html" class="grid-card">
-      <h3>Designing an Ethical AI Teaching Assistant </h3>
+      <h3>Designing an Ethical AI Teaching Assistant</h3>
       <p class="card-sub">Aug 2023</p>
       <p>Prototyping an AI TA that nudges students rather than answers directly.</p>
     </a>
-    <!-- Add more cards here -->
   </div>
 
-  <!-- Highlights placeholder -->
-  <div class="card-grid content-section" data-tag="highlights">
-    <!-- highlight cards go here -->
-  </div>
+  <!-- Highlights -->
+  <div class="card-grid content-section" data-tag="highlights"></div>
 
   <!-- Toggle logic -->
   <script>
@@ -97,10 +99,12 @@
         sections.forEach(section => {
           const isPaper = section.classList.contains('paper-section');
           const match = tag === 'all'
-          ? !isPaper // don't show paper-section on "all"
-          : section.dataset.tag === tag;
+            ? !isPaper
+            : section.dataset.tag === tag;
 
-          section.style.display = match ? (section.classList.contains('card-grid') ? 'grid' : 'block') : 'none';
+          section.style.display = match
+            ? (section.classList.contains('card-grid') ? 'grid' : 'block')
+            : 'none';
         });
       });
     });
