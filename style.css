@@ -7,25 +7,29 @@ body {
   background-color: #fdf6e3;
   color: #111;
   margin: 0;
-  padding: 4rem 1.5rem;
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-.container {
-  max-width: 650px;
-  margin: 0 auto;
+/* =========================
+   Header block
+========================= */
+
+.header-wide {
+  width: 55vw;
+  max-width: 900px;
+  min-width: 420px;
 }
 
 /* =========================
-   Header
+   Name + Icons row
 ========================= */
-
-.top-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-}
 
 .name-centered {
   font-size: 1.75rem;
@@ -34,11 +38,12 @@ body {
 }
 
 .header-wide {
-  width: 55vw;
-  max-width: 900px;
-  min-width: 420px;
+  display: flex;
+  flex-direction: column;
+}
 
-  margin: 0 auto;
+/* row */
+.header-wide > .header-row {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -54,14 +59,14 @@ body {
 }
 
 .social-icons a {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
   width: 30px;
   height: 30px;
   background-color: #111;
   color: #fff;
   border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   font-size: 14px;
   text-decoration: none;
   transition: background-color 0.2s ease;
@@ -72,171 +77,12 @@ body {
 }
 
 /* =========================
-   Divider (wide, centered)
+   Divider
 ========================= */
 
 .divider {
   border: none;
   height: 1px;
   background-color: #444;
-
-  width: 55vw;
-  max-width: 900px;
-  min-width: 420px;
-
-  margin: 0.4rem auto 2.2rem auto;
-}
-
-/* =========================
-   Avatar under divider
-========================= */
-
-.below-divider {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 2.5rem;
-  align-items: start;
-  margin-bottom: 2.5rem;
-}
-
-.avatar-large {
-  width: 110px;
-  height: 110px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-/* =========================
-   About text
-========================= */
-
-.about {
-  font-size: 1.1rem;
-  line-height: 1.75;
-  font-weight: 400;
-  color: #333;
-  margin-bottom: 2rem;
-  max-width: 600px;
-}
-
-/* =========================
-   Links
-========================= */
-
-a {
-  color: inherit;
-  text-decoration: none;
-  border-bottom: 1px dotted rgba(0, 0, 0, 0.15);
-  transition: border-bottom-color 0.2s ease;
-}
-
-a:hover {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-}
-
-/* =========================
-   Filter bar
-========================= */
-
-.filter-bar {
-  display: flex;
-  gap: 0.5rem;
-  overflow-x: auto;
-  margin: 3rem 0 2rem 0;
-  padding-bottom: 0.5rem;
-}
-
-.filter-bar::-webkit-scrollbar {
-  display: none;
-}
-
-.filter-button {
-  background: transparent;
-  border: 1px solid #111;
-  padding: 0.5rem 1rem;
-  font-family: inherit;
-  font-size: 1rem;
-  cursor: pointer;
-}
-
-.filter-button.active {
-  background-color: #111;
-  color: #fff;
-}
-
-/* =========================
-   Papers
-========================= */
-
-.paper-section {
-  margin-top: 3rem;
-}
-
-.paper {
-  margin-bottom: 1.5rem;
-  line-height: 1.6;
-}
-
-/* =========================
-   Cards / Projects
-========================= */
-
-.card-grid {
-  max-width: 960px;
-  margin: 0 auto 4rem auto;
-  padding: 0 1rem;
-
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-}
-
-.grid-card {
-  display: block;
-  border: 1px solid #111;
-  padding: 1rem;
-  background-color: #fdf6e3;
-  transition: box-shadow 0.2s ease;
-}
-
-.grid-card:hover {
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-}
-
-.grid-card h3 {
-  margin: 0 0 0.25rem;
-  font-size: 1.1rem;
-  font-weight: bold;
-}
-
-.card-sub {
-  font-size: 0.9rem;
-  color: #999;
-  margin-bottom: 0.5rem;
-}
-
-.grid-card p {
-  margin: 0;
-  font-size: 0.95rem;
-  line-height: 1.4;
-}
-
-/* =========================
-   Responsive
-========================= */
-
-@media (max-width: 768px) {
-  .card-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .divider {
-    width: 80vw;
-    min-width: unset;
-  }
-
-  .avatar-large {
-    width: 90px;
-    height: 90px;
-  }
+  margin-top: 0.4rem;
 }
