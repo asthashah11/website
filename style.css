@@ -7,14 +7,7 @@ body {
   background-color: #fdf6e3;
   color: #111;
   margin: 0;
-  height: 100vh;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 4rem 1.5rem;
 }
 
 /* =========================
